@@ -2,11 +2,6 @@
 
 Theming .NET WinForms, C# or VB.Net, to Google's Material Design Principles. This Fork adds .Net 8 compatibility and additional features 
 
-## Contributing
-
-- Feel free to open a PR with new features or bug fixes. Since this project is not currently active, big changes will not be considered.
-- Support this and more projects by donating:
-
 ## A quick look
 
 ![home](https://user-images.githubusercontent.com/77468294/134770847-0f20f37f-e3e7-4e15-b838-cf53b0b32c4e.png)
