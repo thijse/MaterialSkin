@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-		<TargetFrameworks>net5.0-windows;net48;net461</TargetFrameworks>
+		<TargetFrameworks>net8.0-windows;net7.0-windows;net6.0-windows;net5.0-windows</TargetFrameworks>
 		<RuntimeIdentifier>win</RuntimeIdentifier>
       <OutputType>Library</OutputType>
       <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -22,12 +22,39 @@
       <PackageTags>material design materialdesign google forms theme skin</PackageTags>
       <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows|AnyCPU'">
+      <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows|AnyCPU'">
+      <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows|AnyCPU'">
+      <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows|AnyCPU'">
+      <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows|AnyCPU'">
+      <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows|AnyCPU'">
+          <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0-windows|AnyCPU'">
+      <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net5.0-windows|AnyCPU'">
+      <NoWarn>1701;1702;CA1416</NoWarn>
+    </PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
 		<Reference Include="System.Design" />
 	</ItemGroup>
     <ItemGroup>
       <Compile Update="Controls\BaseTextBox.cs">
         <SubType>Component</SubType>
+      </Compile>
+      <Compile Update="Controls\MaterialModalForm.cs">
+        <SubType>Form</SubType>
       </Compile>
       <Compile Update="Controls\MaterialListBox.cs">
         <SubType>Component</SubType>
@@ -109,6 +136,7 @@
 		<EmbeddedResource Include="Resources\Roboto-Black.ttf" />
 		<EmbeddedResource Include="Resources\Roboto-Light.ttf" />
 		<EmbeddedResource Include="Resources\Roboto-Thin.ttf" />
+		<EmbeddedResource Include="Resources\RobotoMono-Regular.ttf" />
     </ItemGroup>
     <ItemGroup>
       <Compile Remove="Controls\MaterialMenuStrip.cs" />

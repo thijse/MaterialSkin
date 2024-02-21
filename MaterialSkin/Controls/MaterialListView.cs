@@ -5,6 +5,8 @@
     using System.Drawing;
     using System.Windows.Forms;
 
+    // https://stackoverflow.com/questions/69307235/winforms-listview-group-customise-colour-and-font-size
+
     public class MaterialListView : ListView, IMaterialControl
     {
         [Browsable(false)]
@@ -35,6 +37,10 @@
             }
         }
 
+        [Category("Appearance"), Browsable(true)]
+        [DefaultValue(false)]
+        public bool Separator { get; set; }
+
         [Browsable(false)]
         private ListViewItem HoveredItem { get; set; }
 
@@ -43,21 +49,21 @@
 
         public MaterialListView()
         {
-            GridLines = false;
+            GridLines     = false;
             FullRowSelect = true;
-            View = View.Details;
-            OwnerDraw = true;
-            ResizeRedraw = true;
-            BorderStyle = BorderStyle.None;
-            MinimumSize = new Size(200, 100);
+            View          = View.Details;
+            OwnerDraw     = true;
+            ResizeRedraw  = true;
+            BorderStyle   = BorderStyle.None;
+            MinimumSize   = new Size(200, 100);
 
             SetStyle(ControlStyles.DoubleBuffer | ControlStyles.OptimizedDoubleBuffer, true);
-            BackColor = SkinManager.BackgroundColor;
+            BackColor     = SkinManager.BackgroundColor;
 
             // Fix for hovers, by default it doesn't redraw
             MouseLocation = new Point(-1, -1);
-            MouseState = MouseState.OUT;
-            MouseEnter += delegate
+            MouseState    = MouseState.OUT;
+            MouseEnter   += delegate
             {
                 MouseState = MouseState.HOVER;
             };
@@ -129,7 +135,10 @@
             }
 
             // Draw separator line
-            g.DrawLine(new Pen(SkinManager.DividersColor), e.Bounds.Left, e.Bounds.Y, e.Bounds.Right, e.Bounds.Y);
+            if (Separator)
+            {
+                g.DrawLine(new Pen(SkinManager.DividersColor), e.Bounds.Left, e.Bounds.Y, e.Bounds.Right, e.Bounds.Y);
+            }
 
             foreach (ListViewItem.ListViewSubItem subItem in e.Item.SubItems)
             {
@@ -193,12 +202,12 @@
             base.InitLayout();
 
             // enforce settings
-            GridLines = false;
+            GridLines     = false;
             FullRowSelect = true;
-            View = View.Details;
-            OwnerDraw = true;
-            ResizeRedraw = true;
-            BorderStyle = BorderStyle.None;
+            View          = View.Details;
+            OwnerDraw     = true;
+            ResizeRedraw  = true;
+            BorderStyle   = BorderStyle.None;
         }
 
         protected override void OnCreateControl()

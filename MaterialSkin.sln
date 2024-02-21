@@ -1,12 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialSkinExample", "MaterialSkinExample\MaterialSkinExample.csproj", "{47409AA5-62AE-4189-8E83-C471502DF5E9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialSkin", "MaterialSkin\MaterialSkin.csproj", "{8EB7611B-68CD-4B8B-987A-11717E2B250C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{17028688-3699-4BC7-849F-A6B0F6E766BC}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -14,24 +9,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialSkinCore", "MaterialSkin\MaterialSkinCore.csproj", "{031DCCA6-79CD-41F0-AA5A-09FDE1C1D308}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialSkinExampleCore", "MaterialSkinExample\MaterialSkinExampleCore.csproj", "{6B308BC0-5832-46A0-88A3-A1180198814F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{47409AA5-62AE-4189-8E83-C471502DF5E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47409AA5-62AE-4189-8E83-C471502DF5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47409AA5-62AE-4189-8E83-C471502DF5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47409AA5-62AE-4189-8E83-C471502DF5E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EB7611B-68CD-4B8B-987A-11717E2B250C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EB7611B-68CD-4B8B-987A-11717E2B250C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EB7611B-68CD-4B8B-987A-11717E2B250C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EB7611B-68CD-4B8B-987A-11717E2B250C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{031DCCA6-79CD-41F0-AA5A-09FDE1C1D308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{031DCCA6-79CD-41F0-AA5A-09FDE1C1D308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{031DCCA6-79CD-41F0-AA5A-09FDE1C1D308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{031DCCA6-79CD-41F0-AA5A-09FDE1C1D308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B308BC0-5832-46A0-88A3-A1180198814F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B308BC0-5832-46A0-88A3-A1180198814F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B308BC0-5832-46A0-88A3-A1180198814F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B308BC0-5832-46A0-88A3-A1180198814F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

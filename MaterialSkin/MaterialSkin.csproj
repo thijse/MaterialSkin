@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MaterialSkin</RootNamespace>
     <AssemblyName>MaterialSkin</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -46,6 +46,9 @@
     <Compile Include="ColorScheme.cs" />
     <Compile Include="Controls\BaseTextBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Controls\MaterialModalForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\FlexibleMaterialDialog.cs">
       <SubType>Form</SubType>
@@ -180,6 +183,9 @@
     <EmbeddedResource Include="Resources\Roboto-Black.ttf" />
     <EmbeddedResource Include="Resources\Roboto-Light.ttf" />
     <EmbeddedResource Include="Resources\Roboto-Thin.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RobotoMono-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">
