@@ -1,6 +1,6 @@
-# MaterialSkin 2 for .NET WinForms
+# MaterialSkin 2 for .NET Core WinForms
 
-Theming .NET WinForms, C# or VB.Net, to Google's Material Design Principles. This Fork adds .Net 8 compatibility and additional features 
+Theming .NET WinForms, C# or VB.Net, to Google's Material Design Principles. This Fork adds .Net 6 to 8 compatibility and additional features, with the idea to push back to the main repository
 
 ## A quick look
 
