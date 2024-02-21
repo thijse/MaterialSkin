@@ -352,3 +352,30 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+.ionide
+
+# Fody - auto-generated XML schema
+FodyWeavers.xsd
+
+# VS Code files for those working on multiple tools
+.vscode
+!.vscodesettings.json
+!.vscodetasks.json
+!.vscodelaunch.json
+!.vscodeextensions.json
+.code-workspace
+
+# Local History for Visual Studio Code
+.history
+.bak
+
+# Windows Installer files from build outputs
+.cab
+.msi
+.msix
+.msm
+.msp
+
+# JetBrains Rider
+.idea
+.sln.iml
