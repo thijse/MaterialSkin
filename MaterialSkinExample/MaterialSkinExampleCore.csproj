@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MaterialSkinExample</RootNamespace>
+    <AssemblyName>MaterialSkinExample</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;CA1416</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;CA1416</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Resources\win10HighDPI.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaterialSkin\MaterialSkinCore.csproj" />
+  </ItemGroup>
+</Project>
