@@ -297,6 +297,20 @@ namespace MaterialSkinExample
             materialTextBox21.ShowAssistiveText = materialSwitch16.Checked;
         }
 
+        private void materialButtonStartLoadingCircle_Click(object sender, EventArgs e)
+        {
+            var active = true;
+            materialLoadingCircle1.Active = active;
+            materialLoadingCircle2.Active = active;
+            materialLoadingCircle3.Active = active;
+        }
 
+        private void materialButtonStopLoadingCircle_Click(object sender, EventArgs e)
+        {
+            var active = false;
+            materialLoadingCircle1.Active = active;
+            materialLoadingCircle2.Active = active;
+            materialLoadingCircle3.Active = active;
+        }
     }
 }

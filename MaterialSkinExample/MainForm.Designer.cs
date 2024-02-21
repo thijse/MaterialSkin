@@ -157,6 +157,12 @@ namespace MaterialSkinExample
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             tabPage5 = new TabPage();
+            materialButtonStopLoadingCircle = new MaterialButton();
+            materialButtonStartLoadingCircle = new MaterialButton();
+            materialLoadingCircle2 = new MaterialLoadingCircle();
+            materialLoadingCircle1 = new MaterialLoadingCircle();
+            materialLabel60 = new MaterialLabel();
+            materialLabel61 = new MaterialLabel();
             materialSlider1 = new MaterialSlider();
             materialLabel49 = new MaterialLabel();
             materialFlatButton2 = new MaterialButton();
@@ -224,6 +230,7 @@ namespace MaterialSkinExample
             item2ToolStripMenuItem = new MaterialToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             item3ToolStripMenuItem = new MaterialToolStripMenuItem();
+            materialLoadingCircle3 = new MaterialLoadingCircle();
             materialTabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage7.SuspendLayout();
@@ -2251,6 +2258,13 @@ namespace MaterialSkinExample
             // tabPage5
             // 
             tabPage5.BackColor = Color.White;
+            tabPage5.Controls.Add(materialButtonStopLoadingCircle);
+            tabPage5.Controls.Add(materialButtonStartLoadingCircle);
+            tabPage5.Controls.Add(materialLoadingCircle3);
+            tabPage5.Controls.Add(materialLoadingCircle2);
+            tabPage5.Controls.Add(materialLoadingCircle1);
+            tabPage5.Controls.Add(materialLabel60);
+            tabPage5.Controls.Add(materialLabel61);
             tabPage5.Controls.Add(materialSlider1);
             tabPage5.Controls.Add(materialLabel49);
             tabPage5.Controls.Add(materialFlatButton2);
@@ -2268,11 +2282,115 @@ namespace MaterialSkinExample
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Progress Bar";
             // 
+            // materialButtonStopLoadingCircle
+            // 
+            materialButtonStopLoadingCircle.AutoSize = false;
+            materialButtonStopLoadingCircle.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButtonStopLoadingCircle.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButtonStopLoadingCircle.Depth = 0;
+            materialButtonStopLoadingCircle.HighEmphasis = true;
+            materialButtonStopLoadingCircle.Icon = null;
+            materialButtonStopLoadingCircle.Location = new Point(451, 500);
+            materialButtonStopLoadingCircle.Margin = new Padding(5, 7, 5, 7);
+            materialButtonStopLoadingCircle.MouseState = MouseState.HOVER;
+            materialButtonStopLoadingCircle.Name = "materialButtonStopLoadingCircle";
+            materialButtonStopLoadingCircle.NoAccentTextColor = Color.Empty;
+            materialButtonStopLoadingCircle.Size = new Size(105, 42);
+            materialButtonStopLoadingCircle.TabIndex = 74;
+            materialButtonStopLoadingCircle.Text = "Stop";
+            materialButtonStopLoadingCircle.Type = MaterialButton.MaterialButtonType.Outlined;
+            materialButtonStopLoadingCircle.UseAccentColor = false;
+            materialButtonStopLoadingCircle.UseVisualStyleBackColor = true;
+            materialButtonStopLoadingCircle.Click += materialButtonStopLoadingCircle_Click;
+            // 
+            // materialButtonStartLoadingCircle
+            // 
+            materialButtonStartLoadingCircle.AutoSize = false;
+            materialButtonStartLoadingCircle.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            materialButtonStartLoadingCircle.Density = MaterialButton.MaterialButtonDensity.Default;
+            materialButtonStartLoadingCircle.Depth = 0;
+            materialButtonStartLoadingCircle.HighEmphasis = true;
+            materialButtonStartLoadingCircle.Icon = null;
+            materialButtonStartLoadingCircle.Location = new Point(336, 500);
+            materialButtonStartLoadingCircle.Margin = new Padding(5, 7, 5, 7);
+            materialButtonStartLoadingCircle.MouseState = MouseState.HOVER;
+            materialButtonStartLoadingCircle.Name = "materialButtonStartLoadingCircle";
+            materialButtonStartLoadingCircle.NoAccentTextColor = Color.Empty;
+            materialButtonStartLoadingCircle.Size = new Size(105, 42);
+            materialButtonStartLoadingCircle.TabIndex = 73;
+            materialButtonStartLoadingCircle.Text = "Start";
+            materialButtonStartLoadingCircle.Type = MaterialButton.MaterialButtonType.Contained;
+            materialButtonStartLoadingCircle.UseAccentColor = true;
+            materialButtonStartLoadingCircle.UseVisualStyleBackColor = true;
+            materialButtonStartLoadingCircle.Click += materialButtonStartLoadingCircle_Click;
+            // 
+            // materialLoadingCircle2
+            // 
+            materialLoadingCircle2.Active = false;
+            materialLoadingCircle2.Color = Color.FromArgb(63, 81, 181);
+            materialLoadingCircle2.Depth = 0;
+            materialLoadingCircle2.InnerCircleRadius = 16;
+            materialLoadingCircle2.Location = new Point(77, 509);
+            materialLoadingCircle2.MouseState = MouseState.HOVER;
+            materialLoadingCircle2.Name = "materialLoadingCircle2";
+            materialLoadingCircle2.NumberSpoke = 72;
+            materialLoadingCircle2.OuterCircleRadius = 20;
+            materialLoadingCircle2.Size = new Size(43, 56);
+            materialLoadingCircle2.SpokeThickness = 4;
+            materialLoadingCircle2.StylePreset = MaterialLoadingCircle.StylePresets.Medium;
+            materialLoadingCircle2.TabIndex = 70;
+            materialLoadingCircle2.Text = "materialLoadingCircle2";
+            // 
+            // materialLoadingCircle1
+            // 
+            materialLoadingCircle1.Active = false;
+            materialLoadingCircle1.Color = Color.FromArgb(63, 81, 181);
+            materialLoadingCircle1.Depth = 0;
+            materialLoadingCircle1.InnerCircleRadius = 8;
+            materialLoadingCircle1.Location = new Point(37, 509);
+            materialLoadingCircle1.MouseState = MouseState.HOVER;
+            materialLoadingCircle1.Name = "materialLoadingCircle1";
+            materialLoadingCircle1.NumberSpoke = 36;
+            materialLoadingCircle1.OuterCircleRadius = 9;
+            materialLoadingCircle1.Size = new Size(21, 23);
+            materialLoadingCircle1.SpokeThickness = 4;
+            materialLoadingCircle1.StylePreset = MaterialLoadingCircle.StylePresets.Small;
+            materialLoadingCircle1.TabIndex = 69;
+            materialLoadingCircle1.Text = "materialLoadingCircle1";
+            // 
+            // materialLabel60
+            // 
+            materialLabel60.AutoSize = true;
+            materialLabel60.Depth = 0;
+            materialLabel60.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel60.FontType = MaterialSkinManager.fontType.H4;
+            materialLabel60.Location = new Point(31, 393);
+            materialLabel60.Margin = new Padding(4, 0, 4, 0);
+            materialLabel60.MouseState = MouseState.HOVER;
+            materialLabel60.Name = "materialLabel60";
+            materialLabel60.Size = new Size(212, 41);
+            materialLabel60.TabIndex = 68;
+            materialLabel60.Text = "Loading circle";
+            // 
+            // materialLabel61
+            // 
+            materialLabel61.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            materialLabel61.Depth = 0;
+            materialLabel61.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel61.ForeColor = Color.FromArgb(180, 0, 0, 0);
+            materialLabel61.Location = new Point(31, 456);
+            materialLabel61.Margin = new Padding(4, 0, 4, 0);
+            materialLabel61.MouseState = MouseState.HOVER;
+            materialLabel61.Name = "materialLabel61";
+            materialLabel61.Size = new Size(956, 37);
+            materialLabel61.TabIndex = 67;
+            materialLabel61.Text = "Sliders allow users to make selections from a range of values";
+            // 
             // materialSlider1
             // 
             materialSlider1.Depth = 0;
             materialSlider1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialSlider1.Location = new Point(37, 377);
+            materialSlider1.Location = new Point(37, 338);
             materialSlider1.Margin = new Padding(4, 3, 4, 3);
             materialSlider1.MouseState = MouseState.HOVER;
             materialSlider1.Name = "materialSlider1";
@@ -2285,13 +2403,13 @@ namespace MaterialSkinExample
             // 
             materialLabel49.AutoSize = true;
             materialLabel49.Depth = 0;
-            materialLabel49.Font = new Font("Roboto", 48F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel49.FontType = MaterialSkinManager.fontType.H3;
-            materialLabel49.Location = new Point(37, 270);
+            materialLabel49.Font = new Font("Roboto", 34F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel49.FontType = MaterialSkinManager.fontType.H4;
+            materialLabel49.Location = new Point(34, 245);
             materialLabel49.Margin = new Padding(4, 0, 4, 0);
             materialLabel49.MouseState = MouseState.HOVER;
             materialLabel49.Name = "materialLabel49";
-            materialLabel49.Size = new Size(121, 58);
+            materialLabel49.Size = new Size(86, 41);
             materialLabel49.TabIndex = 65;
             materialLabel49.Text = "Slider";
             // 
@@ -2321,7 +2439,7 @@ namespace MaterialSkinExample
             materialLabel50.Depth = 0;
             materialLabel50.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialLabel50.ForeColor = Color.FromArgb(180, 0, 0, 0);
-            materialLabel50.Location = new Point(34, 337);
+            materialLabel50.Location = new Point(34, 308);
             materialLabel50.Margin = new Padding(4, 0, 4, 0);
             materialLabel50.MouseState = MouseState.HOVER;
             materialLabel50.Name = "materialLabel50";
@@ -3301,6 +3419,23 @@ namespace MaterialSkinExample
             item3ToolStripMenuItem.Size = new Size(170, 30);
             item3ToolStripMenuItem.Text = "Item 3";
             // 
+            // materialLoadingCircle3
+            // 
+            materialLoadingCircle3.Active = false;
+            materialLoadingCircle3.Color = Color.FromArgb(63, 81, 181);
+            materialLoadingCircle3.Depth = 0;
+            materialLoadingCircle3.InnerCircleRadius = 36;
+            materialLoadingCircle3.Location = new Point(129, 509);
+            materialLoadingCircle3.MouseState = MouseState.HOVER;
+            materialLoadingCircle3.Name = "materialLoadingCircle3";
+            materialLoadingCircle3.NumberSpoke = 100;
+            materialLoadingCircle3.OuterCircleRadius = 40;
+            materialLoadingCircle3.Size = new Size(103, 91);
+            materialLoadingCircle3.SpokeThickness = 10;
+            materialLoadingCircle3.StylePreset = MaterialLoadingCircle.StylePresets.Large;
+            materialLoadingCircle3.TabIndex = 72;
+            materialLoadingCircle3.Text = "materialLoadingCircle4";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -3523,5 +3658,12 @@ namespace MaterialSkinExample
         private MaterialLabel materialLabel58;
         private MaterialButton materialButtonShowCustomDialog;
         private MaterialLabel materialLabel59;
+        private MaterialLoadingCircle materialLoadingCircle1;
+        private MaterialLabel materialLabel60;
+        private MaterialLabel materialLabel61;
+        private MaterialLoadingCircle materialLoadingCircle2;
+        private MaterialButton materialButtonStopLoadingCircle;
+        private MaterialButton materialButtonStartLoadingCircle;
+        private MaterialLoadingCircle materialLoadingCircle3;
     }
 }
